@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<title> Añadi una receta </title>
+</head>
+<style>
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #f2f2f2 ;
+}
+
+.active {
+  background-color:  #8c8c8c;
+}
+.column  {
+  float: left;
+  padding: 5px;
+  background-color: #ffffff
+  
+  
+}
+.leftmenu {
+	backround-color: #f2f2f2 
+}
+.leftmenu li a:hover{ 
+	background-color: #f2f2f2 
+	color: black;
+}
+
+.maincontent {
+     backround-color: #bfbfbf
+di a {
+	 float: left;
+	 
+}
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  padding: 14px 16px;
+}
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<ul>
+  <li><a href="../home.html">Home</a></li>
+  <li><a href="recipes.html">Recetas</a></li>
+  <li><a href="news.html">Noticias</a></li>
+  <li><a href="subscription.html"class="active">Añadi una receta</a></li>
+  <li><a href="contact.html">Contactame</a></li>
+</ul>
+<br>
+	<div class="cent">
+  <div class="maincontent">
+   <ul>
+				 <di><a><h2>Completa este formulario para que añada tus recetas</h2></a></di><br>
+<di><a><p> <div class="container">
+  <form action="mailto:tomimakes@gmail.com" method="post" enctype="text/plain">
+  <div class="row">
+    <div class="col-25">
+      <label for="Nombre Completo">Nombre Completo</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="Nombre Completo" name="Nombre Completo" placeholder="Tu nombre">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="nombrerec">Nombre de la Receta</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="nombrerec" name="nombrerec" placeholder="El nombre de la Receta">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="Typo de receta">Typo de Receta</label>
+    </div>
+    <div class="col-75">
+      <select id="Typo de receta" name="Type of Recipe">
+        <option value="Desayuno">Desayuno</option>
+        <option value="lunch">Luch</option>
+        <option value="Snacks">Snacks</option>
+		<option value="Te">Te</option>
+		<option value="Cena">Cena</option>
+		<option value="Postre">Postre</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Contenidos de la receta</label>
+    </div>
+    <div class="col-75">
+      <textarea id="subject" name="subject" placeholder="Aca va tu receta" style="height:200px"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <input type="submit" value="Submit">
+  </div>
+  </form>
+</div>
+</p></a></di><br>
+  </ul>
+  </div>
+
+</body>
+<script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+<script>paypal.Buttons().render('body');</script>
+</html>
