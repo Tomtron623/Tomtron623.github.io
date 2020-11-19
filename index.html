@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head> 
+<title> Login </title>
+</head>
+<style>
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #f2f2f2 ;
+}
+
+.active {
+  background-color:  #8c8c8c;
+}
+.column  {
+  float: left;
+  padding: 5px;
+  background-color: #ffffff
+  
+  
+}
+.leftmenu {
+	backround-color: #f2f2f2 
+}
+.leftmenu li a:hover{ 
+	background-color: #f2f2f2 
+	color: black;
+}
+
+.maincontent {
+     backround-color: #bfbfbf
+	 float: left;
+	 
+}
+di{
+  display: inline-block;
+  color: black;
+  padding: 10px 100px;
+  text-decoration: none;
+  text-align: center;
+}
+di a:hover {
+  background-color: #f2f2f2  ;
+}
+</style>
+</head>
+<body>
+<div class="cent">
+  <div class="maincontent">
+   <ul>
+   <di><a><h1> Contraseña para acceder Recetas Familiares </h1></di></a>
+   <br>
+   <di><a>    <form>
+				<label for="pswd">Enter your password: </label>
+				<input type="password" id="pswd">
+				<input type="button" value="Submit" onclick="checkPswd();" />
+   	          </form>
+	  </di></a>
+	  <br>
+	<di><a> <p> Asegurate de apretar el boton submit. Enter no funciona <p> </di></a>
+  </ul>
+  </div>
+	<p>
+
+</body>
+<script type="text/javascript">
+    $('#searchbox input').bind('keypress', function(e) {
+    if(e.keyCode==13){
+      checkPswd();
+    }
+});
+	
+	
+	function checkPswd() {
+        var confirmPassword = "misrecetas";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
+             window.location="home.html";
+        }
+        else{
+            alert("Passwords do not match.");
+        }
+    }
+	
+</script>
+</html>
