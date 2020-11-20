@@ -30,7 +30,7 @@ li a {
 }
 .titles{
 color: black;
-  padding: 20px 30px;
+  padding: 20px 10px;
 }
 .titles:hover {
   background-color: #f2f2f2 ;
@@ -84,7 +84,9 @@ di a:hover {
    color: white;
    margin: 3px 0.5%;
    float: left; 
-   width: 160px;
+   width: 15%;
+   min-width: 130px;
+   max-width: 200px;
    border-radius: 10px;   
    padding: 20px 0.001%;
 
@@ -93,13 +95,13 @@ di a:hover {
 opacity: 0.6;
 }
 .chocotorta{  
-   background: url('Tabs/Submenus/Images/chocotorta.jpg') no-repeat top left;    
+   background: url('Tabs/Submenus/Images/chocotorta.jpg') center no-repeat ;    
   } 
 .panqueques{  
-   background: url('Tabs/Submenus/Images/panqueques.jpg') no-repeat top left;    
+   background: url('Tabs/Submenus/Images/panqueques.jpg') center no-repeat;    
   }  
 .flan{  
-   background: url('Tabs/Submenus/Images/flan.jpg') no-repeat top left;    
+   background: url('Tabs/Submenus/Images/flan.jpg') center no-repeat;    
   }    
 </style>
 </head>
@@ -110,7 +112,7 @@ opacity: 0.6;
   <li><a href="recipes.html"class="active titles">Recetas</a></li>
   <li><a href="subscription.html"class="titles">Añadir una receta</a></li>
   <li><input id="searchbar" onkeyup="search_recipe()" type="text"
-        name="search" placeholder="Buscar Receyas..."> </li>
+        name="search" placeholder="Buscar Recetas..."> </li>
 
 <script>
 function search_recipe() { 
