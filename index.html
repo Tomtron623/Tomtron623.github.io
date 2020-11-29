@@ -5,75 +5,50 @@
 <title> Recetas </title>
 </head>
 <style>
-body {
-  background-repeat: no-repeat;
-  background-size: cover;
-  
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #ffffff;
-}
-
 li {
-  float: left;
+align: center;
 }
-
-li a {
-  display: inline-block;
-  text-align: center;
+body {
+  font-family: "Lato", sans-serif;
+  background-color#A0D9E5;
+}
+h1{
+  margin-left: 10px;
+}
+.tabbar{
+  margin-left:120px;
+  padding: 0px 10px;
+}
+.content {
+  margin-left:120px;
+  padding: 0px 10px;
+}
+.sidebar{
+  height: 100%;
+  width: 120px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #7D1A1A;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.sidebar a {
+  padding: 6px 8px 6px 10px;
   text-decoration: none;
-  
+  font-size: 22px;
+  color: #f1f1f1;
+  display: block;
 }
-.titles{
-color: black;
-  padding: 20px 10px;
-}
-.titles:hover {
-  background-color: #f2f2f2 ;
-}
-
-.active {
-  background-color:  #8c8c8c;
-}
-.column  {
-  float: left;
-  padding: 5px;
-  background-color: #ffffff
-  
-  
-}
-.leftmenu {
-	backround-color: #f2f2f2 
-}
-.leftmenu li a:hover{ 
-	background-color: #f2f2f2 
-	color: black;
-}
-
-.maincontent {
-     backround-color: #bfbfbf
-	 float: left;
-	 
-}
-di{
-  display: inline-block;
-  color: black;
-  padding: 10px 100px;
-  text-decoration: none;
-  text-align: center;
-}
-di a:hover {
-  background-color: #f2f2f2  ;
+.sidebar a:hover {
+  color: #818181;
 }
 #searchbar{ 
-     margin-left: 5%; 
+     margin-left: 10px; 
      padding: 20px; 
      border-radius: 10px; 
-	 width: 105px ;
+	 width: 105px ;	 
    }   
   #list{ 
     font-size:  1.5em; 
@@ -82,6 +57,8 @@ di a:hover {
 .recipies{
    display: list-item;
    font-size: 20px;
+   text-decoration: none;
+   text-align: center;
    color: white;
    margin: 3px 0.5%;
    float: left; 
@@ -89,32 +66,42 @@ di a:hover {
    min-width: 130px;
    max-width: 200px;
    border-radius: 10px;   
-   padding: 20px 0.001%;
+   padding: 20px 1%;
+   list-style-type: none;
 
   }  
 .image:hover{
 opacity: 0.6;
 }
-.chocotorta{  
+.chocotorta{
+   border: 1px;
+   border-style: solid;
+   border-color:#001f3f;
    background: url('Tabs/Submenus/Images/chocotorta.jpg') center no-repeat ;    
   } 
 .panqueques{  
+   border: 1px; 
+   border-style: solid;
+   border-color:#001f3f;
    background: url('Tabs/Submenus/Images/panqueques.jpg') center no-repeat;    
   }  
 .flan{  
+   border: 1px;
+   border-style: solid;
+   border-color:#001f3f;
    background: url('Tabs/Submenus/Images/flan.jpg') center no-repeat;    
   }    
 </style>
 </head>
 
 <body>
-
-<ul>
-  <li><a href="recipes.html"class="active titles">Recetas</a></li>
-  <li><a href="subscription.html"class="titles">Añadir una receta</a></li>
-  <li><input id="searchbar" onkeyup="search_recipe()" type="text"
-        name="search" placeholder="Buscar Recetas..."> </li>
-
+<div class="tabbar">
+  <input id="searchbar" onkeyup="search_recipe()" type="text"
+        name="search" placeholder="Buscar Recetas..."> 
+</div>
+<div class="sidebar">
+	<a href="Tabs/Submenus/Breakfasts/breakfast.html"class="titles">Desayuno</a>
+</div>
 <script>
 function search_recipe() { 
     let input = document.getElementById('searchbar').value 
@@ -133,27 +120,11 @@ function search_recipe() {
 </script>
 </ul>
 <br>
-<div class="clearfix">
-  <div class="column leftmenu">
-    <ul>
-      <li><a href="Tabs/Submenus/Breakfasts/breakfast.html"class="titles">Desayuno</a></li><br>
-      <li><a href="Tabs/Submenus/Lunch/lunch.html"class="titles" >Lunch</a></li><br>
-      <li><a href="Tabs/Submenus/Snacks/snacks.html"class="titles">Snacks</a></li><br>
-      <li><a href="Tabs/Submenus/Afternoon Meal/aftermeal.html"class="titles">Te</a></li><br>
-      <li><a href="Tabs/Submenus/Dinner/dinner.html"class="titles">Cena</a></li><br>
-      <li><a href="Tabs/Submenus/Desserts/desserts.html"class="titles">Postre</a></li><br>
-    </ul>
-  </div>
- 
-   <ul>
-      <di><h1>Busqueda</h1></di><br>
-	  <li class="recipies panqueques image"><a href="Tabs/Submenus/Snacks/panqueque.html"class="recipies">Panqueques</a></li>
-	  
-	  
-	  <li class="recipies chocotorta image"><a href="Tabs/Submenus/Desserts/chocotorta.html"class="recipies">Chocotorta</a></li>
-	  
-	  
-	  <li class="recipies flan image"><a href="Tabs/Submenus/Desserts/flancheap.html"class="recipies">Flan</a></li>
-  </ul> 
+<div class="content">
+	<h1>Busqueda</h1><br>
+	<li class="recipies panqueques image"><a href="Tabs/Submenus/Snacks/panqueque.html"class="recipies">Panqueques</a></li>	  
+	<li class="recipies chocotorta image"><a href="Tabs/Submenus/Desserts/chocotorta.html"class="recipies">Chocotorta</a></li>    
+	<li class="recipies flan image"><a href="Tabs/Submenus/Desserts/flancheap.html"class="recipies">Flan</a></li>
+</div>
 </body>
 </html>
