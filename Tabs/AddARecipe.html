@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<title> Recetas </title>
+</head>
+<style>
+li {
+align: center;
+}
+body {
+  font-family: "Lato", sans-serif;
+  background-color#A0D9E5;
+}
+h1{
+  margin-left: 10px;
+}
+.tabbar{
+  margin-left:90px;
+  padding: 0px 10px;
+}
+.content {
+  margin-left:90px;
+  padding: 0px 10px;
+}
+.sidebar{
+  height: 100%;
+  width: 90px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #7D1A1A;
+  overflow-x: hidden;
+  padding-top: 5px;
+}
+.sidebar a {
+  padding: 10px 8px 6px 4px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #f1f1f1;
+  display: block;
+}
+.sidebar a:hover {
+  color: #818181;
+}
+#searchbar{ 
+     margin-left: 10px; 
+     padding: 20px; 
+     border-radius: 10px; 
+	 width: 105px ;	 
+   }   
+  #list{ 
+    font-size:  1.5em; 
+    margin-left: 10%; 
+   } 
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="sidebar">
+	<a><img src="Submenus/Images/icon.png" alt="Logo" style="width:60px;height:60px;"></a>
+	<a href="../index.html">Recetas</a>
+	<a href="AddARecipe.html">Agrega tu Receta</a>
+</div>
+</ul>
+<br>
+<div class="content">
+      				 <di><a><h2>Completa este formulario para añadir tus recetas</h2></a></di><br>
+<di><a><p> <div class="container">
+  <form action="mailto:tomimakes@gmail.com" method="post" enctype="text/plain" target="_blank">
+  <div class="row">
+    <div class="col-25">
+      <label for="Nombre Completo">Nombre Completo</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="Nombre Completo" name="Nombre Completo" placeholder="Tu nombre">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="nombrerec">Nombre de la Receta</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="nombrerec" name="nombrerec" placeholder="El nombre de la Receta">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="Typo de receta">Typo de Receta</label>
+    </div>
+    <div class="col-75">
+      <select id="Typo de receta" name="Type of Recipe">
+        <option value="dulce">Dulce</option>
+        <option value="salado">Salado</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Contenidos de la receta</label>
+    </div>
+    <div class="col-75">
+      <textarea id="subject" name="subject" placeholder="Aca va tu receta" style="height:200px"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <input type="submit" value="Submit">
+  </div>
+  </form>
+</div>
+</p></a><br>
+</div>
+</body>
+</html>
